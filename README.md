@@ -44,6 +44,18 @@ This repository contains agent skills for creating, editing, and deploying Servi
 
 Alternatively, loading the skills into Claude Code will also allow Cursor to use them.
 
+### GitHub Copilot
+
+1. Update GitHub CLI to version `2.90.0` or later, then install the skill directly from this repo:
+   ```
+   gh skill install ServiceNow/sdk now-sdk
+   ```
+   By default this installs the skill as a project skill in `.github/skills/now-sdk`. Add `--scope user` to install it as a personal skill (`~/.copilot/skills/now-sdk`) shared across all your projects instead.
+2. In an open Copilot CLI session, run `/skills reload`, or start a new session to load the skill.
+3. Confirm it loaded with `/skills info now-sdk`.
+
+Alternatively, without GitHub CLI, manually copy the [`skills/now-sdk`](skills/now-sdk) directory into `.github/skills/now-sdk` (project) or `~/.copilot/skills/now-sdk` (personal), then run `/skills reload`.
+
 ### Grok
 
 1. Start a Grok session.
